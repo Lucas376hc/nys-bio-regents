@@ -12,10 +12,10 @@
 <style>
 :root{--bg:#08091a;--surface:#0f1322;--card:#161c2e;--card2:#1c2440;--border:#252f50;--border2:#2e3a5c;--green:#0fce81;--green-dim:rgba(15,206,129,.12);--green-glow:rgba(15,206,129,.25);--cyan:#22d3ee;--blue:#3b82f6;--blue-dim:rgba(59,130,246,.12);--amber:#f59e0b;--amber-dim:rgba(245,158,11,.12);--red:#f43f5e;--red-dim:rgba(244,63,94,.12);--purple:#a855f7;--purple-dim:rgba(168,85,247,.12);--text:#e8eef8;--text2:#9aaac4;--text3:#5a6a8a;--ink:#06070f;--r:16px;--r-sm:9px;--r-xs:6px;--font:'Sora',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono','Courier New',monospace;--shadow-sm:0 2px 8px rgba(0,0,0,.35);--shadow-md:0 6px 24px rgba(0,0,0,.45);--shadow-lg:0 16px 48px rgba(0,0,0,.55)}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{overflow-x:hidden}body{width:100%;max-width:100vw;overflow-x:hidden}
+html{}body{width:100%;max-width:100vw;}
 svg{max-width:100%;height:auto;display:block}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;font-size:15px;line-height:1.65}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;;font-size:15px;line-height:1.65}
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.028'/%3E%3C/svg%3E");pointer-events:none;z-index:9998}
 button{font-family:var(--font)}
 
@@ -33,7 +33,7 @@ button{font-family:var(--font)}
 
 /* SCREEN SYSTEM */
 .screen{display:none;min-height:100vh}
-#home{display:flex;flex-direction:column;width:100%;max-width:100vw;overflow-x:hidden}
+#home{display:flex;flex-direction:column;width:100%;max-width:100vw;}
 #day-view,#diag-screen{display:none}
 
 /* SAFARI BANNER */
@@ -413,9 +413,9 @@ id:1,
 title:"Ecosystems & Carbon Cycling",
 icon:"🌊",
 videos:[
-  {title:"Carbon Cycle — Bozeman Science",url:"https://www.youtube.com/watch?v=2D7hZpIkBzo",channel:"Bozeman Science"},
-  {title:"Ecosystem Ecology — Bozeman Science",url:"https://www.youtube.com/watch?v=pDvnFaFSASg",channel:"Bozeman Science"},
-  {title:"Biogeochemical Cycles — Amoeba Sisters",url:"https://www.youtube.com/watch?v=M6Z-UqMCKFA",channel:"Amoeba Sisters"}
+  {title:"Carbon and Nitrogen Cycles — Amoeba Sisters",url:"https://www.youtube.com/watch?v=NHqEthRCqQ4",channel:"Amoeba Sisters"},
+  {title:"Ecology Review: Food Chains & Biodiversity — Amoeba Sisters",url:"https://www.youtube.com/watch?v=srpl5YRw-_U",channel:"Amoeba Sisters"},
+  {title:"Ecological Succession — Amoeba Sisters",url:"https://www.youtube.com/watch?v=uqEUzgVAF6g",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -671,9 +671,8 @@ id:2,
 title:"Energy Flow & Food Webs",
 icon:"⚡",
 videos:[
-  {title:"Food Webs — Crash Course Ecology",url:"https://www.youtube.com/watch?v=TE6OiqDFB84",channel:"CrashCourse"},
-  {title:"Ecological Pyramids — Bozeman Science",url:"https://www.youtube.com/watch?v=QeNB-VQSmNc",channel:"Bozeman Science"},
-  {title:"Trophic Levels — Amoeba Sisters",url:"https://www.youtube.com/watch?v=oMCBATHpDXM",channel:"Amoeba Sisters"}
+  {title:"Food Webs and Energy Pyramids — Amoeba Sisters",url:"https://www.youtube.com/watch?v=-oVavgmveyY",channel:"Amoeba Sisters"},
+  {title:"Population Ecology: Bald Eagle — Crash Course",url:"https://www.youtube.com/watch?v=KfHYN6tZnpU",channel:"CrashCourse"}
 ],
 diagrams:[
   {
@@ -889,9 +888,9 @@ id:3,
 title:"Interdependence & Human Impact",
 icon:"🌿",
 videos:[
-  {title:"Ecological Relationships — Bozeman Science",url:"https://www.youtube.com/watch?v=RYMKmIEYXUU",channel:"Bozeman Science"},
-  {title:"Invasive Species — Stated Clearly",url:"https://www.youtube.com/watch?v=kkOAFDXxBgQ",channel:"Stated Clearly"},
-  {title:"Human Impacts on Ecosystems — Crash Course",url:"https://www.youtube.com/watch?v=ByV3MsoFwLI",channel:"CrashCourse"}
+  {title:"Ecological Relationships — Amoeba Sisters",url:"https://www.youtube.com/watch?v=rNjPI84sApQ",channel:"Amoeba Sisters"},
+  {title:"Ecological Succession — Amoeba Sisters",url:"https://www.youtube.com/watch?v=uqEUzgVAF6g",channel:"Amoeba Sisters"},
+  {title:"Human Population Growth — Crash Course Ecology",url:"https://www.youtube.com/watch?v=E8dkWQVFAoA",channel:"CrashCourse"}
 ],
 diagrams:[
   {
@@ -1165,9 +1164,9 @@ id:4,
 title:"Inheritance & DNA",
 icon:"🧬",
 videos:[
-  {title:"DNA Structure and Replication — Bozeman Science",url:"https://www.youtube.com/watch?v=TNKWgcFPHqw",channel:"Bozeman Science"},
-  {title:"Transcription and Translation — Crash Course",url:"https://www.youtube.com/watch?v=itsb2SqR-R0",channel:"CrashCourse"},
-  {title:"Mutations — Amoeba Sisters",url:"https://www.youtube.com/watch?v=5yHssFxm6Og",channel:"Amoeba Sisters"}
+  {title:"DNA Replication (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=Qqe4thU-os8",channel:"Amoeba Sisters"},
+  {title:"DNA vs RNA (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=JQByjprj_mA",channel:"Amoeba Sisters"},
+  {title:"Mutations (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=vl6Vlf2thvI",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -1409,9 +1408,9 @@ id:5,
 title:"Mendelian Genetics & Inheritance",
 icon:"🎲",
 videos:[
-  {title:"Mendelian Genetics — Bozeman Science",url:"https://www.youtube.com/watch?v=NWqgZUnJdAY",channel:"Bozeman Science"},
-  {title:"Punnett Squares — Amoeba Sisters",url:"https://www.youtube.com/watch?v=D5ymMYcLtv0",channel:"Amoeba Sisters"},
-  {title:"Non-Mendelian Genetics — Crash Course",url:"https://www.youtube.com/watch?v=4vLDMKAMRGY",channel:"CrashCourse"}
+  {title:"Monohybrids and Punnett Squares — Amoeba Sisters",url:"https://www.youtube.com/watch?v=i-0rSv6oxSY",channel:"Amoeba Sisters"},
+  {title:"Pedigrees — Amoeba Sisters",url:"https://www.youtube.com/watch?v=Gd09V2AkZv4",channel:"Amoeba Sisters"},
+  {title:"Sex-Linked Traits (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=dN9SZHO6Wjg",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -1708,9 +1707,8 @@ id:6,
 title:"Natural Selection & Evolution",
 icon:"🦕",
 videos:[
-  {title:"Natural Selection — Bozeman Science",url:"https://www.youtube.com/watch?v=DuArVnT1i-E",channel:"Bozeman Science"},
-  {title:"Evidence for Evolution — Stated Clearly",url:"https://www.youtube.com/watch?v=lIEoO5KdPvg",channel:"Stated Clearly"},
-  {title:"Evolution — Crash Course Biology",url:"https://www.youtube.com/watch?v=GcjgWov7mTM",channel:"CrashCourse"}
+  {title:"Natural Selection — Amoeba Sisters",url:"https://www.youtube.com/watch?v=7VM9YxmULuo",channel:"Amoeba Sisters"},
+  {title:"Evolution — Amoeba Sisters",url:"https://www.youtube.com/watch?v=fI7IV3x-dGI",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -1960,9 +1958,9 @@ id:7,
 title:"Cell Structure & Function",
 icon:"🔬",
 videos:[
-  {title:"Cell Structure — Bozeman Science",url:"https://www.youtube.com/watch?v=8IlzKri08kU",channel:"Bozeman Science"},
-  {title:"Cell Membrane & Transport — Amoeba Sisters",url:"https://www.youtube.com/watch?v=dPKvHrD1eS4",channel:"Amoeba Sisters"},
-  {title:"Mitosis — Crash Course Biology",url:"https://www.youtube.com/watch?v=f-ldPgEfAHI",channel:"CrashCourse"}
+  {title:"Introduction to Cells: Grand Cell Tour — Amoeba Sisters",url:"https://www.youtube.com/watch?v=8IlzKri08kk",channel:"Amoeba Sisters"},
+  {title:"Prokaryotic vs Eukaryotic Cells (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=Pxujitlv8wc",channel:"Amoeba Sisters"},
+  {title:"Cell Transport — Amoeba Sisters",url:"https://www.youtube.com/watch?v=Ptmlvtei8hw",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -2268,9 +2266,9 @@ id:8,
 title:"Homeostasis & Body Systems",
 icon:"⚖️",
 videos:[
-  {title:"Homeostasis — Bozeman Science",url:"https://www.youtube.com/watch?v=e4KObzGBjkE",channel:"Bozeman Science"},
-  {title:"Immune System — Crash Course",url:"https://www.youtube.com/watch?v=GIJK3dwCWCw",channel:"CrashCourse"},
-  {title:"Nervous System — Amoeba Sisters",url:"https://www.youtube.com/watch?v=v5p9_wVW8KM",channel:"Amoeba Sisters"}
+  {title:"Homeostasis and Negative/Positive Feedback — Amoeba Sisters",url:"https://www.youtube.com/watch?v=Iz0Q9nTZCw4",channel:"Amoeba Sisters"},
+  {title:"Immune System — Amoeba Sisters",url:"https://www.youtube.com/watch?v=fSEFXl2XQpc",channel:"Amoeba Sisters"},
+  {title:"Human Body Systems Overview 2024 — Amoeba Sisters",url:"https://www.youtube.com/watch?v=0JDCViWGn-0",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -2534,9 +2532,8 @@ id:9,
 title:"Photosynthesis & Cellular Respiration",
 icon:"🌱",
 videos:[
-  {title:"Photosynthesis — Bozeman Science",url:"https://www.youtube.com/watch?v=g78utcLQrJ4",channel:"Bozeman Science"},
-  {title:"Cellular Respiration — Crash Course",url:"https://www.youtube.com/watch?v=00jbG_cfGuQ",channel:"CrashCourse"},
-  {title:"Photosynthesis & Respiration — Amoeba Sisters",url:"https://www.youtube.com/watch?v=fsOt7fEjkgs",channel:"Amoeba Sisters"}
+  {title:"Photosynthesis (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=CMiPYHNNg28",channel:"Amoeba Sisters"},
+  {title:"Cellular Respiration — Amoeba Sisters",url:"https://www.youtube.com/watch?v=4Eo7JtRA7lg",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -2781,9 +2778,9 @@ id:10,
 title:"Reproduction & Development",
 icon:"🔄",
 videos:[
-  {title:"Mitosis vs Meiosis — Bozeman Science",url:"https://www.youtube.com/watch?v=zFOIGOyNq18",channel:"Bozeman Science"},
-  {title:"Meiosis — Crash Course Biology",url:"https://www.youtube.com/watch?v=qCLmR9-YY7o",channel:"CrashCourse"},
-  {title:"Cell Division — Amoeba Sisters",url:"https://www.youtube.com/watch?v=f-ldPgEfAHI",channel:"Amoeba Sisters"}
+  {title:"Meiosis (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=VzDMG7ke69g",channel:"Amoeba Sisters"},
+  {title:"Mitosis vs Meiosis Side by Side — Amoeba Sisters",url:"https://www.youtube.com/watch?v=zrKdz93WlVk",channel:"Amoeba Sisters"},
+  {title:"Mitosis (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=f-ldPgEfAHI",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -3085,9 +3082,9 @@ id:11,
 title:"Biotechnology & Genetic Engineering",
 icon:"⚙️",
 videos:[
-  {title:"Genetic Engineering — Kurzgesagt",url:"https://www.youtube.com/watch?v=jAhjPd4uNFY",channel:"Kurzgesagt"},
-  {title:"CRISPR — Stated Clearly",url:"https://www.youtube.com/watch?v=6tw_JVz_IEc",channel:"Stated Clearly"},
-  {title:"Biotechnology — Bozeman Science",url:"https://www.youtube.com/watch?v=e95BHgvM1lQ",channel:"Bozeman Science"}
+  {title:"Genetic Engineering — Amoeba Sisters",url:"https://www.youtube.com/watch?v=CDw4WPng2iE",channel:"Amoeba Sisters"},
+  {title:"Gel Electrophoresis — Amoeba Sisters",url:"https://www.youtube.com/watch?v=ZDZUAleWX78",channel:"Amoeba Sisters"},
+  {title:"Mutations (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=vl6Vlf2thvI",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -3341,9 +3338,9 @@ id:12,
 title:"Population Dynamics & Carrying Capacity",
 icon:"📈",
 videos:[
-  {title:"Population Ecology — Bozeman Science",url:"https://www.youtube.com/watch?v=RBOsqmZlpFc",channel:"Bozeman Science"},
-  {title:"Carrying Capacity — Crash Course",url:"https://www.youtube.com/watch?v=7uUfCvEZaA4",channel:"CrashCourse"},
-  {title:"Population Growth — Amoeba Sisters",url:"https://www.youtube.com/watch?v=Gg0mLvKUHJE",channel:"Amoeba Sisters"}
+  {title:"Population Ecology: Texas Mosquito — Crash Course",url:"https://www.youtube.com/watch?v=RBOsqmBQBQk",channel:"CrashCourse"},
+  {title:"Human Population Growth — Crash Course Ecology",url:"https://www.youtube.com/watch?v=E8dkWQVFAoA",channel:"CrashCourse"},
+  {title:"Ecological Relationships — Amoeba Sisters",url:"https://www.youtube.com/watch?v=rNjPI84sApQ",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -3610,9 +3607,9 @@ id:13,
 title:"NYS Mandatory Labs Deep Dive",
 icon:"🧪",
 videos:[
-  {title:"Beaks of Finches Lab — Demo",url:"https://www.youtube.com/watch?v=McAkMjGNNIw",channel:"NYSED Biology"},
-  {title:"Diffusion Through a Membrane Lab",url:"https://www.youtube.com/watch?v=9wp4rl7nYZ0",channel:"Biology Lab"},
-  {title:"Gel Electrophoresis Lab — How To",url:"https://www.youtube.com/watch?v=aXt3eqGRtPM",channel:"Bozeman Science"}
+  {title:"Gel Electrophoresis — Amoeba Sisters",url:"https://www.youtube.com/watch?v=ZDZUAleWX78",channel:"Amoeba Sisters"},
+  {title:"Osmosis and Water Potential (Updated) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=L-osEc07vMs",channel:"Amoeba Sisters"},
+  {title:"Natural Selection — Amoeba Sisters",url:"https://www.youtube.com/watch?v=7VM9YxmULuo",channel:"Amoeba Sisters"}
 ],
 diagrams:[
   {
@@ -3868,9 +3865,9 @@ id:14,
 title:"Final Review & Exam Strategy",
 icon:"🎯",
 videos:[
-  {title:"NYS Life Science Biology Regents Overview",url:"https://www.youtube.com/watch?v=kVf7J_GhFuE",channel:"Regents Prep"},
-  {title:"How to Answer CER Questions",url:"https://www.youtube.com/watch?v=DFdUB8ILbJM",channel:"Science Skills"},
-  {title:"Top 10 Biology Regents Mistakes",url:"https://www.youtube.com/watch?v=8pQHNBMeOA4",channel:"Regents Review"}
+  {title:"Stroll Through the Playlist (Biology Review) — Amoeba Sisters",url:"https://www.youtube.com/watch?v=7xeFP0SEDdc",channel:"Amoeba Sisters"},
+  {title:"Ecology Review — Amoeba Sisters",url:"https://www.youtube.com/watch?v=srpl5YRw-_U",channel:"Amoeba Sisters"},
+  {title:"Last Minute Biology EOC Cram Session",url:"https://www.youtube.com/watch?v=bDQ1b9kzUuU",channel:"Review Video"}
 ],
 diagrams:[
   {
