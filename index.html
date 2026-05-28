@@ -4547,7 +4547,7 @@ document.addEventListener('DOMContentLoaded',()=>{if(location.protocol==='https:
 if(document.readyState==='complete'||document.readyState==='interactive'){setTimeout(renderHome,0);}
 
 // ── Screen routing
-function show(id){['home','day-view','diag-screen'].forEach(s=>{const el=document.getElementById(s);if(el)el.style.display='none'});const el=document.getElementById(id);if(el){el.style.display=(id==='home')?'flex':'block'}window.scrollTo(0,0)}
+function show(id){['home','day-view','diag-screen'].forEach(s=>{const el=document.getElementById(s);if(el)el.style.display='none'});const el=document.getElementById(id);if(el){el.style.display=(id==='home')?'flex':'block'}window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;setTimeout(()=>{window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;},50);}
 function goHome(){show('home');renderHome()}
 function openDay(id){
   const day=biologyData.find(d=>d.id===id);if(!day)return;
