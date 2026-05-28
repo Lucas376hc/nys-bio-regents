@@ -116,7 +116,7 @@ body:not(.js-ready) #home{padding-top:100px}
 .tab-btn{background:transparent;border:1px solid transparent;border-radius:var(--r-sm);padding:7px 18px;font-size:.78rem;font-weight:600;cursor:pointer;color:var(--text3);font-family:var(--font);white-space:nowrap;transition:all .15s;flex-shrink:0}
 .tab-btn:hover{color:var(--text);border-color:var(--border)}
 .tab-btn.active{background:rgba(15,206,129,.12);border-color:rgba(15,206,129,.35);color:var(--green)}
-.content-wrap{max-width:780px;margin:0 auto;padding:48px 16px max(80px,calc(env(safe-area-inset-bottom,0px)+80px))!important}
+.content-wrap{max-width:780px;margin:0 auto;padding:48px 16px max(80px,calc(env(safe-area-inset-bottom,0px)+80px))}
 
 /* LEARN */
 .lesson-block h2{font-size:1.28rem;font-weight:800;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);background:linear-gradient(90deg,var(--text),var(--text2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -248,7 +248,7 @@ body:not(.js-ready) #home{padding-top:100px}
 @media(max-width:480px){
   .day-grid{padding:6px 12px 28px}
   .hero-title{font-size:1.95rem}
-  .content-wrap,.diag-wrap{padding:48px 12px max(80px,calc(env(safe-area-inset-bottom,0)+80px))!important}
+  .content-wrap,.diag-wrap{padding:48px 12px max(80px,calc(env(safe-area-inset-bottom,0)+80px))}
 }
 @media(min-width:900px){.home-hero{padding:72px 20px 52px}}
 
@@ -4617,19 +4617,19 @@ function resetDay(id){
 
 // ── Learn
 function renderLearn(day){
-  const wrap=document.getElementById('day-content');wrap.style.paddingTop='40px';
+  const wrap=document.getElementById('day-content');
   const diags=day.diagrams||[];let html=day.learn;
   if(diags.length){const tmp=document.createElement('div');tmp.innerHTML=html;const h3s=tmp.querySelectorAll('h3');if(h3s.length){const step=Math.max(1,Math.floor(h3s.length/diags.length));let di=0;h3s.forEach((h3,i)=>{if(di<diags.length&&i%step===0){const vc=document.createElement('div');vc.className='visual-card';vc.innerHTML=`<div class="visual-card-header"><span class="visual-card-label">📊 Visual Reference</span></div><div class="visual-svg-wrap">${diags[di].svg}</div><div class="visual-caption">${diags[di].caption}</div>`;h3.parentNode.insertBefore(vc,h3);di++;}});html=tmp.innerHTML;}}
-  wrap.innerHTML='<div class="lesson-block fade-in">'+html+'</div>'
+  wrap.innerHTML='<div style="height:20px"></div><div class="lesson-block fade-in">'+html+'</div>'
     +'<button class="reset-day-btn" onclick="resetDay('+day.id+')">🔄 Reset This Day</button>';
 }
 
 // ── Videos (with tracking)
 function renderVideos(day){
-  const wrap=document.getElementById('day-content');wrap.style.paddingTop='40px';
+  const wrap=document.getElementById('day-content');
   if(!day.videos||!day.videos.length){wrap.innerHTML='<p style="color:var(--text3);text-align:center;margin-top:48px">No videos for this day yet.</p>';return}
   const watched=getWatched(day.id);
-  wrap.innerHTML=day.videos.map((v,vi)=>{
+  wrap.innerHTML='<div style="padding-top:20px"></div>'+day.videos.map((v,vi)=>{
     const done=watched.includes(vi);
     return`<div class="video-slot${done?' watched':''}">
       <div class="vs-meta">
@@ -4646,11 +4646,11 @@ function markVideo(id,vi){markWatched(id,vi);renderVideos(biologyData.find(d=>d.
 // ── Quiz
 function resetQuiz(){ST.quizDone=false;ST.mcSel={};ST.crGrades={};ST.crLeft=0;ST.scoreGot=0;ST.scoreTotal=0}
 function renderQuiz(day){
-  const wrap=document.getElementById('day-content');wrap.style.paddingTop='40px';
+  const wrap=document.getElementById('day-content');
   const c=day.cluster;
   if(!c){wrap.innerHTML='<p style="color:var(--text3);text-align:center;margin-top:48px">Quiz coming soon.</p>';return}
   const qs=c.questions,nMC=qs.filter(q=>q.type==='MC').length,nCR=qs.filter(q=>q.type==='CR').length;
-  wrap.innerHTML=`<div class="quiz-header fade-up"><h2>✏️ Day ${day.id} Quiz — ${day.title}</h2><p>${qs.length} questions &nbsp;·&nbsp; <strong>${nMC}</strong> multiple choice &nbsp;·&nbsp; <strong>${nCR}</strong> constructed response &nbsp;·&nbsp; Need <strong>85%+</strong> to pass</p></div>
+  wrap.innerHTML='<div style="height:20px"></div>'+`<div class="quiz-header fade-up"><h2>✏️ Day ${day.id} Quiz — ${day.title}</h2><p>${qs.length} questions &nbsp;·&nbsp; <strong>${nMC}</strong> multiple choice &nbsp;·&nbsp; <strong>${nCR}</strong> constructed response &nbsp;·&nbsp; Need <strong>85%+</strong> to pass</p></div>
   <div class="score-tracker" id="score-tracker"><div class="st-lbl">Running score — grade your written answers to finish</div><div class="st-val" id="st-val">—</div></div>
   <div class="cluster-wrap fade-up"><div class="phenom-head"><div class="phenom-lbl">📍 Phenomenon &amp; Context</div><div class="phenom-text">${c.phenomenon}</div></div>${c.stimulus?`<div class="stimulus-wrap">${c.stimulus}${c.stimCap?`<div class="stim-cap">${c.stimCap}</div>`:''}</div>`:''}<div class="questions-wrap" id="qs-wrap">${qs.map((q,i)=>buildQ(q,i)).join('')}</div></div>
   <button class="quiz-submit" id="quiz-submit" onclick="submitQuiz()" disabled>Submit Answers</button>
